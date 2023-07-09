@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Chelsea+Market&family=Rum+Raisin&family=Ysabeau+Infant&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Chelsea Market', cursive;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+    background-color: #38225b;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+ul>li {
+    list-style: none;
+    font-size: 30px;
+}
+
+ul>li>a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    transition: all .5s;
+}
+ul>li>a:hover {
+    color: #a26bf9;
+    font-size: 35px;
+}
+
+.gameWindow{
+    position: relative;
+    margin-top: 75px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+}
+.game{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 10vh);
+    grid-template-rows: repeat(3, 10vh);
+    margin-right: 10%;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.box:hover{
+    background-color: #d6c4f3;
+}
+.text{
+    font-size: 5vh;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+}
+div>img{
+    /* display: none; */
+    /* width: 156px; */
+    width: 0;
+    transition: width .5s ease-in-out;
+}
+
+.reset{
+    /* margin: 0 20px; */
+    font-size: 20px;
+    padding: 5px 16px;
+    cursor: pointer;
+    outline: none;
+    background: #5d238d;
+    color: white;
+    border-radius: 3px;
+    border: 2px solid black;
+}
+.turn{
+    font-size: 22px;
+    display: block;
+    margin-bottom: 20px;
+}
+.reset:active{
+    background: #48097c;
+}
+.line{
+    left: 0;
+    background-color: #47026b;
+    height: 3px;
+    position: absolute;
+    width: 0;
+    /* transform: translate(15vh, 15vh) rotate(45deg); */
+    transition: width 1s ease-in-out;
+}
+
+/* Media Queries */
+@media (max-width: 800px) {
+    .gameWindow{
+        flex-wrap: wrap;
+    }
+    .details{
+        margin-top: 10px;
+    }
+    .details>h1{
+        font-size: 25px;
+    }
+    .turn{
+        font-size: 22px;
+        text-align: center;
+    }
+    .reset{
+        display: block;
+        margin: 0 auto;
+    }
+    .excited{
+        display: block;
+        margin: 2px auto;
+        width: 0;
+    }
+}
+
+/* Utility Classes:  */
+.bt-0{
+    border-top: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.br-0{
+    border-right: 0;
+}
